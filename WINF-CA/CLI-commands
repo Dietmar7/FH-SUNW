@@ -21,9 +21,10 @@ nano openssl-ca.conf
 openssl req -text -noout -verify -in servercert.csr
 
 6)Sign CSR
+openssl ca -config openssl-ca.conf -policy signing_policy -extensions signing_req -out servercert.pem -infiles servercert.csr
 
-
-
+7) Verify server certificate
+openssl x509 -in servercert.pem -text -noout
 
 
 
