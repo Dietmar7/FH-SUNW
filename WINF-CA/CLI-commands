@@ -1,0 +1,35 @@
+# 
+0) Create config for CA.  X = Group
+mkdir WINF-CA-0X
+cd WINF-CA-0X
+nano openssl-ca.conf
+
+1) Create Keypair/Certificate for own CA
+openssl req -x509 -config openssl-ca.conf -days 365 -newkey rsa:4096 -sha256 -out cacert.pem -outform PEM
+
+2) Check certificate of CA
+openssl x509 -in cacert.pem -text -noout
+openssl x509 -purpose -in cacert.pem -inform PEM
+
+3) Add settings for CA to create certificates
+nano openssl-ca.conf
+
+4) Create CSR for webserver
+ openssl req -config openssl-server.conf -newkey rsa:2048 -sha256 -nodes -out servercert.csr -outform PEM
+
+5) Verify CSR
+openssl req -text -noout -verify -in servercert.csr
+
+6)Sign CSR
+
+
+
+
+
+
+
+
+
+
+Reference / Source:
+https://stackoverflow.com/questions/21297139/how-do-you-sign-a-certificate-signing-request-with-your-certification-authority/21340898#21340898
