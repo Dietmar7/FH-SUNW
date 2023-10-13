@@ -1,7 +1,7 @@
 # 
-0) Create config for CA.  X = Group
-mkdir WINF-CA-0X
-cd WINF-CA-0X
+0) Create config for CA
+mkdir WINF-CA
+cd WINF-CA
 nano openssl-ca.conf
 
 1) Create Keypair/Certificate for own CA
