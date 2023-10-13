@@ -2,7 +2,7 @@
 0) Create config for CA
 mkdir WINF-CA
 cd WINF-CA
-nano openssl-ca.conf
+wget https://github.com/Dietmar7/FH-SUNW/blob/main/WINF-CA/openssl-ca.conf
 
 1) Create Keypair/Certificate for own CA
 openssl req -x509 -config openssl-ca.conf -days 365 -newkey rsa:4096 -sha256 -out cacert.pem -outform PEM
@@ -12,14 +12,16 @@ openssl x509 -in cacert.pem -text -noout
 openssl x509 -purpose -in cacert.pem -inform PEM
 
 3) Add settings for CA to create certificates - Paste from addon_openssl-ca.conf
-nano openssl-ca.conf
+ nano openssl-ca.conf
 
 touch index.txt
 echo '01' > serial.txt
 
 
-4) Create CSR for webserver
- openssl req -config openssl-server.conf -newkey rsa:2048 -sha256 -nodes -out servercert.csr -outform PEM
+4) Create request for webserver
+wget https://github.com/Dietmar7/FH-SUNW/blob/main/WINF-CA/openssl-server.conf
+nano openssl-server.conf
+openssl req -config openssl-server.conf -newkey rsa:2048 -sha256 -nodes -out servercert.csr -outform PEM
 
 5) Verify CSR
 openssl req -text -noout -verify -in servercert.csr
