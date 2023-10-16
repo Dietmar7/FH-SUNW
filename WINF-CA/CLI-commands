@@ -1,3 +1,8 @@
+
+
+
+
+
 # 
 0) Create config for CA
 mkdir WINF-CA
@@ -34,6 +39,7 @@ openssl x509 -in servercert.pem -text -noout
 
 
 8) Apache Webserver Reset - Wiederherstellung Ausgangskonfiguration
+# BEI BEDARF / if necessary
 sudo rm /etc/apache2/cert/*
 sudo rm /etc/apache2/sites-enabled/default-ssl.conf
 sudo systemctl restart apache2
