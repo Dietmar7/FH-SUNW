@@ -21,7 +21,7 @@ openssl x509 -purpose -in cacert.pem -inform PEM
 3) Add settings for CA to create certificates - Paste from addon_openssl-ca.conf
  nano openssl-ca.conf
 
-touch index.txt
+touch serial.txt
 echo '01' > serial.txt
 
 
