@@ -55,7 +55,7 @@ sudo cp serverkey.pem /etc/apache2/cert/
 10) Anpassen Zertifikate-Konfiguration von Apache
 
 sudo cp /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/
-nano /etc/apache2/sites-enabled/default-ssl.conf
+sudo nano /etc/apache2/sites-enabled/default-ssl.conf
 
     SSLCertificateFile      /etc/apache2/cert/servercert.pem
     SSLCertificateKeyFile /etc/apache2/cert/serverkey.pem
