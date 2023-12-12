@@ -1,0 +1,49 @@
+!SUNW2 Übung 3 - ACL und Packetfilter
+!Standardconfig zur Router-Inbetriebnahme
+
+
+enable		! Wechseln Sie in den Privilege-Exec Modus
+conf t		! Wechseln Sie in den Konfigurations-Modus
+
+hostname IMA-RO-<Platz-Nr>
+ip domain name ima.local
+crypto key generate rsa mod 2048    	   !Key erzeugen für SSH
+
+!User für ssh login - schlechtes PW :-)
+username imaadmin priv 15 secret 0 ima4lan 
+line vty 0 15
+login local			! Lokale Userauthentifizierung
+
+logging buffered 256000 debugging	
+interface gig0/0/0
+ip address 172.30.1.<Platz-Nr> 255.255.0.0  
+no shutdown
+
+Interface gig0/0/1
+ip address 192.168.<Platz-Nr>.1 255.255.255.0 
+no shutdown
+Router rip			! Aktivierung einfaches dyn. Routing
+network 172.30.0.0	! RIP Labor-Netz
+network 192.168.<Platz-nr>.0   ! Eigenes Netz zu Labor-PC
+ip dhcp pool LAN		! DHCP für eigenen Arbeitsplatz-PC
+network 192.168.<Platz-Nr>.0 255.255.255.0 
+default-router 192.168.<Platz-Nr>.1		
+dns-server 172.30.255.253	 
+
+exit
+write mem
+
+
+
+
+
+
+!!! Nur für Referenz:
+ip access-list extended OUTSIDE-out
+permit icmp any any log
+permit udp any any log
+permit tcp any any log
+deny ip any any log log
+
+ip access-list extended OUTSIDE-in
+permit ip any any log
