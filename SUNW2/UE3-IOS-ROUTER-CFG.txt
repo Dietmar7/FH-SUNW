@@ -25,6 +25,8 @@ no shutdown
 Router rip			! Aktivierung einfaches dyn. Routing
 network 172.30.0.0	! RIP Labor-Netz
 network 192.168.<Platz-nr>.0   ! Eigenes Netz zu Labor-PC
+exit
+
 ip dhcp pool LAN		! DHCP für eigenen Arbeitsplatz-PC
 network 192.168.<Platz-Nr>.0 255.255.255.0 
 default-router 192.168.<Platz-Nr>.1		
