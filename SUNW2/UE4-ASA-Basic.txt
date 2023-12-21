@@ -1,0 +1,47 @@
+interface GigabitEthernet1/1
+ no shut
+ nameif outside
+ security-level 0
+ ip address dhcp setroute
+!
+interface GigabitEthernet1/2
+ no shut
+ nameif inside
+ security-level 100
+ ip address 192.168.1.1 255.255.255.0
+
+object network PAT
+ subnet 0.0.0.0 0.0.0.0
+
+object network PAT
+ nat (any,outside) dynamic interface
+
+http server enable
+http 192.168.1.0 255.255.255.0 inside
+
+ssh timeout 5
+ssh version 2
+ssh key-exchange group dh-group1-sha1
+console timeout 0
+
+dhcpd auto_config outside
+dhcpd address 192.168.1.5-192.168.1.254 inside
+dhcpd enable inside
+
+asdm image disk0:/asdm-openjre-7161-150.bin
+
+
+
+
+enable
+conf t
+username admin password imaadmin
+hostname ASA-FW-<Platz-Nr>
+logging enable
+logging buffered 6
+logging buffer-size 256000
+domain-name ima.local
+aaa authentication SSH console LOCAL
+
+
+
