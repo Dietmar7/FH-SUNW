@@ -24,6 +24,9 @@ ssh version 2
 ssh key-exchange group dh-group1-sha1
 console timeout 0
 
+!enable SSH access
+ssh  192.168.1.0 255.255.255.0 inside
+
 dhcpd auto_config outside
 dhcpd address 192.168.1.5-192.168.1.254 inside
 dhcpd enable inside
