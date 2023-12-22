@@ -11,10 +11,10 @@ interface GigabitEthernet1/2
  ip address 192.168.1.1 255.255.255.0
 
 object network PAT
- subnet 0.0.0.0 0.0.0.0
+ subnet 192.168.1.0 255.255.255.0
 
 object network PAT
- nat (any,outside) dynamic interface
+ nat (inside,outside) dynamic interface
 
 http server enable
 http 192.168.1.0 255.255.255.0 inside
