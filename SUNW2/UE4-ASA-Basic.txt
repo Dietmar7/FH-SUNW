@@ -48,3 +48,9 @@ aaa authentication SSH console LOCAL
 
 
 
+!EXTRA
+policy-map global_policy
+class inspection_default
+inspect icmp
+
+
