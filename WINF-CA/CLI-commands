@@ -1,11 +1,9 @@
 
 
-## COMMANDS JUST FOR REFERENCE. Use workflow provided in UE-1 PDF document.
-
+## COMMANDS PROVIDED HERE ARE JUST FOR REFERENCE. 
+!! Use workflow provided in UE-1 PDF document !!
 WinSCP Download Link:  https://winscp.net/download/WinSCP-6.1.2-Setup.exe
 
-
-# Start here! 
 0) Reset & create config for CA
 cd
 rm -r WINF-CA
@@ -43,16 +41,14 @@ openssl x509 -in servercert.pem -text -noout
 
 
 8) Apache Webserver Reset - Wiederherstellung Ausgangskonfiguration
-# BEI BEDARF / if necessary
+# RESET former data   (BEI BEDARF / if necessary )
 sudo rm /etc/apache2/cert/*
 sudo rm /etc/apache2/sites-enabled/default-ssl.conf
 sudo systemctl restart apache2
 
-
 9)Kopieren der Zerttifikate von eigener CA
 sudo cp servercert.pem /etc/apache2/cert/
 sudo cp serverkey.pem /etc/apache2/cert/
-
 
 10) Anpassen Zertifikate-Konfiguration von Apache
 
@@ -66,14 +62,6 @@ sudo nano /etc/apache2/sites-enabled/default-ssl.conf
 11) Neustart und Kontrolle Apache
 sudo systemctl restart apache2
 sudo  systemctl status apache2.service
-
-
-
-
-
-
-
-
 
 
 
