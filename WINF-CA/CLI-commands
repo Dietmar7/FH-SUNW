@@ -5,8 +5,10 @@
 WinSCP Download Link:  https://winscp.net/download/WinSCP-6.1.2-Setup.exe
 
 
-# 
-0) Create config for CA
+# Start here! 
+0) Reset & create config for CA
+cd
+rm -r WINF-CA
 mkdir WINF-CA
 cd WINF-CA
 wget https://raw.githubusercontent.com/Dietmar7/FH-SUNW/main/WINF-CA/openssl-ca.conf
