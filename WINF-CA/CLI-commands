@@ -21,9 +21,9 @@ openssl x509 -purpose -in cacert.pem -inform PEM
 3) Add settings for CA to create certificates - Paste from addon_openssl-ca.conf
  nano openssl-ca.conf
 
+3.5) Create files for CA
 touch index.txt
 echo '01' > serial.txt
-
 
 4) Create request for webserver
 wget https://raw.githubusercontent.com/Dietmar7/FH-SUNW/main/WINF-CA/openssl-server.conf
@@ -40,17 +40,17 @@ openssl ca -config openssl-ca.conf -policy signing_policy -extensions signing_re
 openssl x509 -in servercert.pem -text -noout
 
 
-8) Apache Webserver Reset - Wiederherstellung Ausgangskonfiguration
+8) Apache Webserver reset config
 # RESET former data   (BEI BEDARF / if necessary )
 sudo rm /etc/apache2/cert/*
 sudo rm /etc/apache2/sites-enabled/default-ssl.conf
 sudo systemctl restart apache2
 
-9)Kopieren der Zerttifikate von eigener CA
+9)Copy certificate files from own CA
 sudo cp servercert.pem /etc/apache2/cert/
 sudo cp serverkey.pem /etc/apache2/cert/
 
-10) Anpassen Zertifikate-Konfiguration von Apache
+10) Edit certificate config files for Apache
 
 sudo cp /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/
 sudo nano /etc/apache2/sites-enabled/default-ssl.conf
@@ -59,7 +59,7 @@ sudo nano /etc/apache2/sites-enabled/default-ssl.conf
     SSLCertificateKeyFile /etc/apache2/cert/serverkey.pem
 
 
-11) Neustart und Kontrolle Apache
+11) restart and service check
 sudo systemctl restart apache2
 sudo  systemctl status apache2.service
 
