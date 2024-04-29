@@ -1,4 +1,5 @@
 ! Router Default-Konfiguration für SUNW1
+! As-is-template for reference purposes, does not include details as specific IP addressing
 
 enable		! Wechseln Sie in den Privilege-Exec Modus
 conf t		! Wechseln Sie in den Konfigurations-Modus
