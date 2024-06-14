@@ -20,16 +20,16 @@ login local					! Lokale Userauthentifizierung
 logging buffered 256000 debugging	
 
 interface gig0/0/0
-ip address 172.30.1.4<Platz-Nr> 255.255.0.0  
+ip address 172.30.1.XXXX 255.255.0.0  
 no shutdown
 
 interface gig0/0/1
-ip address 192.168.<UE-Nr><Platz-Nr>.1 255.255.255.0 
+ip address 192.168.XXXX 255.255.255.0 
 no shutdown
 
 ip dhcp pool LAN			! DHCP für eigenen Arbeitsplatz-PC
-network 192.168.<UE-Nr><Platz-Nr>.0 255.255.255.0 
-default-router 192.168.<UE-Nr><Platz-Nr>.1		
+network 192.168.xxx.0 255.255.255.0 
+default-router 192.168.xxx.1		
 dns-server 172.30.255.253 
 end
 
