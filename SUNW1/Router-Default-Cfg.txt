@@ -10,8 +10,8 @@ ip domain name sunw.local
 crypto key generate rsa mod 2048    	! Key erzeugen für SSH
 
 !weak credentials, only for demo!
-username admin priv 15 secret 0 admin123  ! User für ssh login
-enable secret 0 cisco
+username admin priv 15 secret 0 imaadmin  ! User für ssh login
+enable secret 0 imalab
 
 !
 line vty 0 15
