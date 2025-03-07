@@ -1,4 +1,4 @@
 # FH-SUNW
 
 Master template files and base configs.
-For educational and demo only.
+For educational purposes and demo only.
