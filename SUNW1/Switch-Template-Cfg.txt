@@ -1,0 +1,15 @@
+! Lan / switch lab config snippets
+! <> parenthesis = variables 
+
+hostname WL<PLATZ_NR>-SWITCH-<SWITCH_NR>
+ip domain-name winf.lab
+username admin priv 15 secret 0 winfadm
+enable secret winflab
+no ip domain lookup
+
+! crypto key generate rsa 2048 
+
+spanning-tree logging
+
+line vty 0 4
+login local
