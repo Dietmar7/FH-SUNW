@@ -1,0 +1,560 @@
+annotations:
+  - border_color: '#808080FF'
+    border_radius: 0
+    border_style: ''
+    color: '#FFFFFFFF'
+    rotation: 0
+    thickness: 1
+    type: rectangle
+    x1: -400.0
+    y1: -200.0
+    x2: 920.0
+    y2: 400.0
+    z_index: 0
+smart_annotations: []
+nodes:
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: hostname CML-SW3
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: CML-SW3
+    node_definition: ioll2-xe
+    parameters: {}
+    ram: null
+    tags: []
+    x: 160
+    y: -120
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: Ethernet0/0
+        mac_address: null
+        slot: 0
+        type: physical
+      - id: i2
+        label: Ethernet0/1
+        mac_address: null
+        slot: 1
+        type: physical
+      - id: i3
+        label: Ethernet0/2
+        mac_address: null
+        slot: 2
+        type: physical
+      - id: i4
+        label: Ethernet0/3
+        mac_address: null
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: hostname CML-SW1
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n1
+    image_definition: null
+    label: CML-SW1
+    node_definition: ioll2-xe
+    parameters: {}
+    ram: null
+    tags: []
+    x: -80
+    y: 40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: Ethernet0/0
+        mac_address: null
+        slot: 0
+        type: physical
+      - id: i2
+        label: Ethernet0/1
+        mac_address: null
+        slot: 1
+        type: physical
+      - id: i3
+        label: Ethernet0/2
+        mac_address: null
+        slot: 2
+        type: physical
+      - id: i4
+        label: Ethernet0/3
+        mac_address: null
+        slot: 3
+        type: physical
+      - id: i5
+        label: Ethernet1/0
+        mac_address: null
+        slot: 4
+        type: physical
+      - id: i6
+        label: Ethernet1/1
+        mac_address: null
+        slot: 5
+        type: physical
+      - id: i7
+        label: Ethernet1/2
+        mac_address: null
+        slot: 6
+        type: physical
+      - id: i8
+        label: Ethernet1/3
+        mac_address: null
+        slot: 7
+        type: physical
+      - id: i9
+        label: Ethernet2/0
+        mac_address: null
+        slot: 8
+        type: physical
+      - id: i10
+        label: Ethernet2/1
+        mac_address: null
+        slot: 9
+        type: physical
+      - id: i11
+        label: Ethernet2/2
+        mac_address: null
+        slot: 10
+        type: physical
+      - id: i12
+        label: Ethernet2/3
+        mac_address: null
+        slot: 11
+        type: physical
+      - id: i13
+        label: Ethernet3/0
+        mac_address: null
+        slot: 12
+        type: physical
+      - id: i14
+        label: Ethernet3/1
+        mac_address: null
+        slot: 13
+        type: physical
+      - id: i15
+        label: Ethernet3/2
+        mac_address: null
+        slot: 14
+        type: physical
+      - id: i16
+        label: Ethernet3/3
+        mac_address: null
+        slot: 15
+        type: physical
+      - id: i17
+        label: Ethernet4/0
+        mac_address: null
+        slot: 16
+        type: physical
+      - id: i18
+        label: Ethernet4/1
+        mac_address: null
+        slot: 17
+        type: physical
+      - id: i19
+        label: Ethernet4/2
+        mac_address: null
+        slot: 18
+        type: physical
+      - id: i20
+        label: Ethernet4/3
+        mac_address: null
+        slot: 19
+        type: physical
+      - id: i21
+        label: Ethernet5/0
+        mac_address: null
+        slot: 20
+        type: physical
+      - id: i22
+        label: Ethernet5/1
+        mac_address: null
+        slot: 21
+        type: physical
+      - id: i23
+        label: Ethernet5/2
+        mac_address: null
+        slot: 22
+        type: physical
+      - id: i24
+        label: Ethernet5/3
+        mac_address: null
+        slot: 23
+        type: physical
+      - id: i25
+        label: Ethernet6/0
+        mac_address: null
+        slot: 24
+        type: physical
+      - id: i26
+        label: Ethernet6/1
+        mac_address: null
+        slot: 25
+        type: physical
+      - id: i27
+        label: Ethernet6/2
+        mac_address: null
+        slot: 26
+        type: physical
+      - id: i28
+        label: Ethernet6/3
+        mac_address: null
+        slot: 27
+        type: physical
+      - id: i29
+        label: Ethernet7/0
+        mac_address: null
+        slot: 28
+        type: physical
+      - id: i30
+        label: Ethernet7/1
+        mac_address: null
+        slot: 29
+        type: physical
+      - id: i31
+        label: Ethernet7/2
+        mac_address: null
+        slot: 30
+        type: physical
+      - id: i32
+        label: Ethernet7/3
+        mac_address: null
+        slot: 31
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: hostname CML-SW2
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n2
+    image_definition: null
+    label: CML-SW2
+    node_definition: ioll2-xe
+    parameters: {}
+    ram: null
+    tags: []
+    x: -80
+    y: -120
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: Ethernet0/0
+        mac_address: null
+        slot: 0
+        type: physical
+      - id: i2
+        label: Ethernet0/1
+        mac_address: null
+        slot: 1
+        type: physical
+      - id: i3
+        label: Ethernet0/2
+        mac_address: null
+        slot: 2
+        type: physical
+      - id: i4
+        label: Ethernet0/3
+        mac_address: null
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: node.cfg
+        content: |-
+          # this is a shell script which will be sourced at boot
+          hostname Desktop-0
+          # configurable user account
+          USERNAME=cisco
+          PASSWORD=cisco
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n3
+    image_definition: null
+    label: desktop-0
+    node_definition: desktop
+    parameters: {}
+    ram: null
+    tags: []
+    x: -280
+    y: 40
+    interfaces:
+      - id: i0
+        label: eth0
+        mac_address: null
+        slot: 0
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: hostname CML-SW4
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n4
+    image_definition: null
+    label: CML-SW4
+    node_definition: ioll2-xe
+    parameters: {}
+    ram: null
+    tags: []
+    x: 160
+    y: 40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: Ethernet0/0
+        mac_address: null
+        slot: 0
+        type: physical
+      - id: i2
+        label: Ethernet0/1
+        mac_address: null
+        slot: 1
+        type: physical
+      - id: i3
+        label: Ethernet0/2
+        mac_address: null
+        slot: 2
+        type: physical
+      - id: i4
+        label: Ethernet0/3
+        mac_address: null
+        slot: 3
+        type: physical
+      - id: i5
+        label: Ethernet1/0
+        mac_address: null
+        slot: 4
+        type: physical
+      - id: i6
+        label: Ethernet1/1
+        mac_address: null
+        slot: 5
+        type: physical
+      - id: i7
+        label: Ethernet1/2
+        mac_address: null
+        slot: 6
+        type: physical
+      - id: i8
+        label: Ethernet1/3
+        mac_address: null
+        slot: 7
+        type: physical
+      - id: i9
+        label: Ethernet2/0
+        mac_address: null
+        slot: 8
+        type: physical
+      - id: i10
+        label: Ethernet2/1
+        mac_address: null
+        slot: 9
+        type: physical
+      - id: i11
+        label: Ethernet2/2
+        mac_address: null
+        slot: 10
+        type: physical
+      - id: i12
+        label: Ethernet2/3
+        mac_address: null
+        slot: 11
+        type: physical
+      - id: i13
+        label: Ethernet3/0
+        mac_address: null
+        slot: 12
+        type: physical
+      - id: i14
+        label: Ethernet3/1
+        mac_address: null
+        slot: 13
+        type: physical
+      - id: i15
+        label: Ethernet3/2
+        mac_address: null
+        slot: 14
+        type: physical
+      - id: i16
+        label: Ethernet3/3
+        mac_address: null
+        slot: 15
+        type: physical
+      - id: i17
+        label: Ethernet4/0
+        mac_address: null
+        slot: 16
+        type: physical
+      - id: i18
+        label: Ethernet4/1
+        mac_address: null
+        slot: 17
+        type: physical
+      - id: i19
+        label: Ethernet4/2
+        mac_address: null
+        slot: 18
+        type: physical
+      - id: i20
+        label: Ethernet4/3
+        mac_address: null
+        slot: 19
+        type: physical
+      - id: i21
+        label: Ethernet5/0
+        mac_address: null
+        slot: 20
+        type: physical
+      - id: i22
+        label: Ethernet5/1
+        mac_address: null
+        slot: 21
+        type: physical
+      - id: i23
+        label: Ethernet5/2
+        mac_address: null
+        slot: 22
+        type: physical
+      - id: i24
+        label: Ethernet5/3
+        mac_address: null
+        slot: 23
+        type: physical
+      - id: i25
+        label: Ethernet6/0
+        mac_address: null
+        slot: 24
+        type: physical
+      - id: i26
+        label: Ethernet6/1
+        mac_address: null
+        slot: 25
+        type: physical
+      - id: i27
+        label: Ethernet6/2
+        mac_address: null
+        slot: 26
+        type: physical
+      - id: i28
+        label: Ethernet6/3
+        mac_address: null
+        slot: 27
+        type: physical
+      - id: i29
+        label: Ethernet7/0
+        mac_address: null
+        slot: 28
+        type: physical
+      - id: i30
+        label: Ethernet7/1
+        mac_address: null
+        slot: 29
+        type: physical
+      - id: i31
+        label: Ethernet7/2
+        mac_address: null
+        slot: 30
+        type: physical
+      - id: i32
+        label: Ethernet7/3
+        mac_address: null
+        slot: 31
+        type: physical
+  - boot_disk_size: null
+    configuration: []
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n5
+    image_definition: null
+    label: ext-conn-0
+    node_definition: external_connector
+    parameters: {}
+    ram: null
+    tags: []
+    x: 360
+    y: 40
+    interfaces:
+      - id: i0
+        label: port
+        mac_address: null
+        slot: 0
+        type: physical
+links:
+  - id: l0
+    n1: n3
+    n2: n1
+    i1: i0
+    i2: i32
+    conditioning: {}
+    label: desktop-0-eth0<->iol-l2-1-Ethernet7/3
+  - id: l1
+    n1: n1
+    n2: n2
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: iol-l2-1-Ethernet0/0<->iol-l2-2-Ethernet0/0
+  - id: l2
+    n1: n4
+    n2: n0
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: iol-l2-3-Ethernet0/0<->iol-l2-0-Ethernet0/0
+  - id: l3
+    n1: n2
+    n2: n0
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: iol-l2-2-Ethernet0/1<->iol-l2-0-Ethernet0/1
+  - id: l4
+    n1: n1
+    n2: n4
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: iol-l2-1-Ethernet0/1<->iol-l2-3-Ethernet0/1
+  - id: l5
+    n1: n5
+    n2: n4
+    i1: i0
+    i2: i5
+    conditioning: {}
+    label: ext-conn-0-port<->iol-l2-4-Ethernet1/0
+lab:
+  description: ''
+  notes: ''
+  title: Lab at Wed 17:33 PM
+  version: 0.3.0
