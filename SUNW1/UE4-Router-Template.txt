@@ -1,0 +1,82 @@
+! For reference only. Commands need adaptions!
+! ! means comments
+enable		! Wechseln Sie in den Privilege-exec Modus
+conf t		! Wechseln Sie in den Konfigurations-Modus
+!
+hostname SUNW-RO-<Platz-Nr>
+ip domain name winf.lab
+!
+crypto key generate rsa mod 2048    	! Key erzeugen für SSH
+!
+username admin priv 15 secret 0 admin123 ! User für ssh login
+enable secret 0 cisco
+line vty 0 15
+login local					! Lokale Userauthentifizierung
+logging buffered 256000 debugging	
+
+interface gig0/0/0  ! Uplink Labor – Wanddose rechter Port, rotes Kabel
+no shutdown
+interface GigabitEthernet0/0/0.22   ! Subinterface für VLAN 22
+description Link-2-RO99
+encapsulation dot1Q 22  ! 802.1q tag VLAN 22
+ip address 192.0.2.<Arbeitsplatz-Nummer> 255.255.255.X
+no shut
+interface gig0/0/1  ! Downlink Arbeitsplatz-PC, Slot #1 NIC
+description Link-2-CML
+ip address 192.168.<Platz-Nr>.1 255.255.255.0 
+no shutdown
+end
+write mem! Dauerhaftes speichern der Konfiguration im NVRAM
+!
+!
+! CML ROUTER
+! Interface extern -> Cisco 4321 Router
+!
+interface ethernet 0/1
+no shut
+ip address 192.168.<Platz-Nr>.2 255.255.255.0
+
+! Interface intern – CML LAN & Ubuntu Desktop
+interface ethernet 0/0
+no shut
+ip address 192.168.4<Platz-Nr>.1 255.255.255.0
+
+ip dhcp pool LAN			! DHCP Server für eigenen Arbeitsplatz-PC
+network 192.168.4<Platz-Nr>.0 255.255.255.0 
+default-router 192.168.4<Platz-Nr>.1		
+dns-server 172.30.255.253
+
+username admin priv 15 secret 0 admin123 ! User für ssh login
+enable secret 0 cisco
+line vty 0 15
+login local					! Lokale Userauthentifizierung
+logging buffered 256000 debugging
+!
+!
+!
+!  Cisco 4321 Router IPv6
+!Cisco 4321 Router
+ipv6 unicast-routing
+interface GigabitEthernet0/0/0.22
+ipv6 address fe80::<Arbeitsplatz-Nummer> link-local
+!
+interface GigabitEthernet0/0/1
+ipv6 address fe80::<Arbeitsplatz-Nummer> link-local
+!
+!
+!CML Router
+ipv6 unicast-routing
+interface ethernet 0
+ipv6 address fe80::f link-local
+
+interface ethernet 1
+ipv6 address 2001:67c:1280:de4X::1/64
+ipv6 address fe80::f link-local
+!
+!
+!
+!Default-Route:  ipv6 route 2000::/3 fe80::99 GigabitEthernet0/0/0.22
+!IPv6-LAN Routing:  ipv6 route 2001:67c:1280:de4X::/64 fe80::X GigabitEthernet0/0/1
+
+
+
