@@ -48,7 +48,7 @@ dns-server 172.30.255.253
 
 username admin priv 15 secret 0 admin123 ! User für ssh login
 enable secret 0 cisco
-line vty 0 15
+line vty 0 4
 login local					! Lokale Userauthentifizierung
 logging buffered 256000 debugging
 !
