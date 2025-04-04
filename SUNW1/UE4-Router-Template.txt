@@ -16,6 +16,8 @@ logging buffered 256000 debugging
 
 interface gig0/0/0  ! Uplink Labor – Wanddose rechter Port, rotes Kabel
 no shutdown
+no ip address
+
 interface GigabitEthernet0/0/0.22   ! Subinterface für VLAN 22
 description Link-2-RO99
 encapsulation dot1Q 22  ! 802.1q tag VLAN 22
