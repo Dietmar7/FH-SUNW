@@ -22,7 +22,8 @@ no shutdown
 no ip address
 
 ! Subinterface für VLAN 22
-interface GigabitEthernet0/0/0.22description Link-2-RO99
+interface GigabitEthernet0/0/0.22
+description Link-2-RO99
 encapsulation dot1Q 22  ! 802.1q tag VLAN 22
 ip address 192.0.2.<Arbeitsplatz-Nummer> 255.255.255.X
 no shut
