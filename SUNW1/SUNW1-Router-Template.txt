@@ -71,17 +71,17 @@ ipv6 address fe80::<Arbeitsplatz-Nummer> link-local
 !
 !CML Router
 ipv6 unicast-routing
-interface ethernet 0
+interface ethernet X
 ipv6 address fe80::f link-local
 
-interface ethernet 1
+interface ethernet Y
 ipv6 address 2001:67c:1280:de4X::1/64
 ipv6 address fe80::f link-local
 !
 !
 !
-!Default-Route:  ipv6 route 2000::/3 fe80::99 GigabitEthernet0/0/0.22
-!IPv6-LAN Routing:  ipv6 route 2001:67c:1280:de4X::/64 fe80::X GigabitEthernet0/0/1
+!Static Default-Route:  ipv6 route 2000::/3 fe80::99 GigabitEthernet0/0/0.22
+!Static IPv6-LAN Routing:  ipv6 route 2001:67c:1280:de4X::/64 fe80::X GigabitEthernet0/0/1
 
 
 
