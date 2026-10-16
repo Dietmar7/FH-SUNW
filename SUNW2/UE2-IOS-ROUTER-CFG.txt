@@ -23,6 +23,7 @@ Interface gig0/0/1
 ip address 192.168.<Platz-Nr>.1 255.255.255.0 
 no shutdown
 Router rip			! Aktivierung einfaches dyn. Routing
+version 2
 network 172.30.0.0	! RIP Labor-Netz
 network 192.168.<Platz-nr>.0   ! Eigenes Netz zu Labor-PC
 exit
